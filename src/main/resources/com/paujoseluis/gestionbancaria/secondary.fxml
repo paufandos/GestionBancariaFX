@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.paujoseluis.gestionbancaria.SecondaryController">
+   <children>
+      <Pane prefHeight="165.0" prefWidth="1024.0">
+         <children>
+            <ImageView fitHeight="132.0" fitWidth="131.0" layoutX="8.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/logo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="53.0" fitWidth="46.0" layoutX="924.0" layoutY="14.0" onMouseClicked="#switchToPrimary" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@images/cerrar.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutY="173.0" prefHeight="118.0" prefWidth="1024.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="INFO CUENTA" />
+            <Label layoutX="132.0" layoutY="37.0" text="Número de cuenta:" />
+            <Label layoutX="132.0" layoutY="64.0" text="Titular:" />
+            <Label fx:id="saldo" layoutX="603.0" layoutY="28.0" prefHeight="53.0" prefWidth="239.0" text="0.0€">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <Label fx:id="numCuenta" layoutX="240.0" layoutY="37.0" text="-----------" />
+            <Label fx:id="titular" layoutX="181.0" layoutY="64.0" text="-----------" />
+         </children>
+      </Pane>
+      <Pane layoutX="6.0" layoutY="365.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="256.0">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="INGRESAR" />
+            <Label layoutX="14.0" layoutY="38.0" text="Cantidad:" />
+            <Label layoutX="14.0" layoutY="67.0" text="Motivo:" />
+            <Button fx:id="botonIngresar" layoutX="16.0" layoutY="102.0" mnemonicParsing="false" onAction="#ingresar" prefHeight="25.0" prefWidth="216.0" text="INGRESAR" />
+            <Spinner fx:id="cantidadIngresar" layoutX="83.0" layoutY="34.0" />
+            <ChoiceBox fx:id="motivoIngreso" layoutX="82.0" layoutY="68.0" prefWidth="150.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="6.0" layoutY="565.0" prefHeight="200.0" prefWidth="256.0">
+         <children>
+            <Label layoutX="16.0" layoutY="12.0" text="RETIRAR" />
+            <Label layoutX="13.0" layoutY="34.0" text="Cantidad:" />
+            <Label layoutX="13.0" layoutY="68.0" text="Motivo:" />
+            <Button fx:id="botonRetirar" layoutX="13.0" layoutY="141.0" mnemonicParsing="false" onAction="#retirar" prefHeight="25.0" prefWidth="216.0" text="RETIRAR" />
+            <Spinner fx:id="cantidadRetirar" layoutX="83.0" layoutY="30.0" />
+            <ChoiceBox fx:id="motivoRetirada" layoutX="82.0" layoutY="64.0" prefWidth="150.0" />
+            <ProgressBar fx:id="donacionONG" layoutX="13.0" layoutY="113.0" prefHeight="18.0" prefWidth="216.0" progress="0.0" />
+            <Label layoutX="13.0" layoutY="93.0" text="ONG" />
+         </children>
+      </Pane>
+      <Pane layoutX="345.0" layoutY="365.0" prefHeight="393.0" prefWidth="650.0">
+         <children>
+            <TabPane prefHeight="381.0" prefWidth="650.0" tabClosingPolicy="UNAVAILABLE">
+              <tabs>
+                <Tab text="AUTORIZADOS">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="386.0" prefWidth="650.0">
+                           <children>
+                              <ListView fx:id="listaAutorizados" fixedCellSize="2.0" layoutX="302.0" layoutY="14.0" prefHeight="317.0" prefWidth="322.0" />
+                              <Label layoutX="14.0" layoutY="22.0" text="TOTAL AUTORIZADOS" />
+                              <ProgressIndicator fx:id="totalAutorizados" layoutX="142.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="46.0" prefWidth="53.0" progress="0.55" />
+                              <Label layoutX="14.0" layoutY="85.0" text="AUTORIZAR" />
+                              <Label layoutX="14.0" layoutY="114.0" text="Nombre:" />
+                              <TextField fx:id="nombreAutorizado" layoutX="78.0" layoutY="110.0" />
+                              <Label layoutX="14.0" layoutY="146.0" text="NIF:" />
+                              <TextField fx:id="nifAutorizado" layoutX="78.0" layoutY="142.0" />
+                              <Button fx:id="botonAutorizar" layoutX="14.0" layoutY="188.0" mnemonicParsing="false" onAction="#autorizar" prefHeight="25.0" prefWidth="216.0" text="AUTORIZAR" />
+                              <Label layoutX="14.0" layoutY="229.0" text="ELIMINAR" />
+                              <Label layoutX="14.0" layoutY="260.0" text="NIF:" />
+                              <TextField fx:id="nifAutorizadoEliminar" layoutX="78.0" layoutY="256.0" />
+                              <Button fx:id="botonEliminar" layoutX="14.0" layoutY="302.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="25.0" prefWidth="216.0" text="ELIMINAR" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+                <Tab text="RECIBOS">
+                  <content>
+                    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <Label layoutX="14.0" layoutY="14.0" text="DOMICILIAR" />
+                              <Label layoutX="14.0" layoutY="40.0" prefHeight="18.0" prefWidth="67.0" text="CIF:" />
+                              <TextField fx:id="cif" layoutX="95.0" layoutY="37.0" />
+                              <Label layoutX="14.0" layoutY="73.0" prefHeight="18.0" prefWidth="67.0" text="Empresa:" />
+                              <TextField fx:id="nombreEmpresa" layoutX="95.0" layoutY="70.0" />
+                              <Label layoutX="12.0" layoutY="106.0" prefHeight="18.0" prefWidth="67.0" text="Importe:" />
+                              <Label layoutX="13.0" layoutY="140.0" prefHeight="18.0" prefWidth="67.0" text="Concepto:" />
+                              <TextField fx:id="conceptoRecibo" layoutX="94.0" layoutY="137.0" />
+                              <Label layoutX="14.0" layoutY="174.0" prefHeight="18.0" prefWidth="75.0" text="Periodicidad:" />
+                              <Spinner fx:id="importeRecibo" layoutX="95.0" layoutY="103.0" />
+                              <RadioButton fx:id="rb_menusal" layoutX="93.0" layoutY="192.0" mnemonicParsing="false" text="Mensual">
+                                 <toggleGroup>
+                                    <ToggleGroup fx:id="periodicidad" />
+                                 </toggleGroup>
+                              </RadioButton>
+                              <RadioButton fx:id="rb_trimestral" layoutX="93.0" layoutY="217.0" mnemonicParsing="false" text="Trimestral" toggleGroup="$periodicidad" />
+                              <RadioButton fx:id="rb_anual" layoutX="94.0" layoutY="242.0" mnemonicParsing="false" text="Anual" toggleGroup="$periodicidad" />
+                              <Button fx:id="botonDomiciliar" layoutX="13.0" layoutY="280.0" mnemonicParsing="false" onAction="#domiciliar" prefHeight="26.0" prefWidth="238.0" text="DOMICILIAR" />
+                              <ListView fx:id="listaRecibos" layoutX="284.0" layoutY="27.0" prefHeight="238.0" prefWidth="347.0" />
+                              <Button fx:id="botonFiltrar" layoutX="338.0" layoutY="280.0" mnemonicParsing="false" onAction="#filtrarPeriodicidad" prefHeight="26.0" prefWidth="240.0" text="FILTRAR" />
+                           </children>
+                        </AnchorPane>
+                  </content>
+                </Tab>
+              </tabs>
+            </TabPane>
+         </children>
+      </Pane>
+   </children>
+</Pane>
