@@ -7,6 +7,7 @@
 <?import javafx.scene.control.ProgressBar?>
 <?import javafx.scene.control.ProgressIndicator?>
 <?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.Separator?>
 <?import javafx.scene.control.Spinner?>
 <?import javafx.scene.control.Tab?>
 <?import javafx.scene.control.TabPane?>
@@ -32,11 +33,19 @@
                   <Image url="@images/cerrar.png" />
                </image>
             </ImageView>
+            <Label layoutX="168.0" layoutY="36.0" text="GRAN BANCO DE SUECA" textFill="#087b97">
+               <font>
+                  <Font name="Roboto Bold" size="50.0" />
+               </font>
+            </Label>
          </children>
       </Pane>
       <Pane layoutY="173.0" prefHeight="118.0" prefWidth="1024.0">
          <children>
-            <Label layoutX="14.0" layoutY="14.0" text="INFO CUENTA" />
+            <Label layoutX="14.0" layoutY="2.0" text="INFO CUENTA" textFill="#087b97">
+               <font>
+                  <Font name="Roboto Bold" size="20.0" />
+               </font></Label>
             <Label layoutX="132.0" layoutY="37.0" text="Número de cuenta:" />
             <Label layoutX="132.0" layoutY="64.0" text="Titular:" />
             <Label fx:id="saldo" layoutX="603.0" layoutY="28.0" prefHeight="53.0" prefWidth="239.0" text="0.0€">
@@ -46,11 +55,15 @@
             </Label>
             <Label fx:id="numCuenta" layoutX="240.0" layoutY="37.0" text="-----------" />
             <Label fx:id="titular" layoutX="181.0" layoutY="64.0" text="-----------" />
+            <Separator layoutX="324.0" layoutY="81.0" prefHeight="4.0" prefWidth="559.0" />
          </children>
       </Pane>
-      <Pane layoutX="6.0" layoutY="365.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="256.0">
+      <Pane layoutX="14.0" layoutY="291.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="256.0">
          <children>
-            <Label layoutX="14.0" layoutY="14.0" text="INGRESAR" />
+            <Label layoutY="2.0" text="INGRESAR" textFill="#087b97">
+               <font>
+                  <Font name="Roboto Bold" size="20.0" />
+               </font></Label>
             <Label layoutX="14.0" layoutY="38.0" text="Cantidad:" />
             <Label layoutX="14.0" layoutY="67.0" text="Motivo:" />
             <Button fx:id="botonIngresar" layoutX="16.0" layoutY="102.0" mnemonicParsing="false" onAction="#ingresar" prefHeight="25.0" prefWidth="216.0" text="INGRESAR" />
@@ -58,9 +71,12 @@
             <ChoiceBox fx:id="motivoIngreso" layoutX="82.0" layoutY="68.0" prefWidth="150.0" />
          </children>
       </Pane>
-      <Pane layoutX="6.0" layoutY="565.0" prefHeight="200.0" prefWidth="256.0">
+      <Pane layoutX="14.0" layoutY="491.0" prefHeight="200.0" prefWidth="256.0">
          <children>
-            <Label layoutX="16.0" layoutY="12.0" text="RETIRAR" />
+            <Label layoutY="2.0" text="RETIRAR" textFill="#087b97">
+               <font>
+                  <Font name="Roboto Bold" size="20.0" />
+               </font></Label>
             <Label layoutX="13.0" layoutY="34.0" text="Cantidad:" />
             <Label layoutX="13.0" layoutY="68.0" text="Motivo:" />
             <Button fx:id="botonRetirar" layoutX="13.0" layoutY="141.0" mnemonicParsing="false" onAction="#retirar" prefHeight="25.0" prefWidth="216.0" text="RETIRAR" />
@@ -70,7 +86,7 @@
             <Label layoutX="13.0" layoutY="93.0" text="ONG" />
          </children>
       </Pane>
-      <Pane layoutX="345.0" layoutY="365.0" prefHeight="393.0" prefWidth="650.0">
+      <Pane layoutX="327.0" layoutY="291.0" prefHeight="393.0" prefWidth="650.0">
          <children>
             <TabPane prefHeight="381.0" prefWidth="650.0" tabClosingPolicy="UNAVAILABLE">
               <tabs>
@@ -81,13 +97,21 @@
                               <ListView fx:id="listaAutorizados" fixedCellSize="2.0" layoutX="302.0" layoutY="14.0" prefHeight="317.0" prefWidth="322.0" />
                               <Label layoutX="14.0" layoutY="22.0" text="TOTAL AUTORIZADOS" />
                               <ProgressIndicator fx:id="totalAutorizados" layoutX="142.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="46.0" prefWidth="53.0" progress="0.55" />
-                              <Label layoutX="14.0" layoutY="85.0" text="AUTORIZAR" />
+                              <Label layoutX="14.0" layoutY="85.0" text="AUTORIZAR" textFill="#087b97">
+                                 <font>
+                                    <Font name="Roboto Bold" size="20.0" />
+                                 </font>
+                              </Label>
                               <Label layoutX="14.0" layoutY="114.0" text="Nombre:" />
                               <TextField fx:id="nombreAutorizado" layoutX="78.0" layoutY="110.0" />
                               <Label layoutX="14.0" layoutY="146.0" text="NIF:" />
                               <TextField fx:id="nifAutorizado" layoutX="78.0" layoutY="142.0" />
                               <Button fx:id="botonAutorizar" layoutX="14.0" layoutY="188.0" mnemonicParsing="false" onAction="#autorizar" prefHeight="25.0" prefWidth="216.0" text="AUTORIZAR" />
-                              <Label layoutX="14.0" layoutY="229.0" text="ELIMINAR" />
+                              <Label layoutX="14.0" layoutY="229.0" text="ELIMINAR" textFill="#087b97">
+                                 <font>
+                                    <Font name="Roboto Bold" size="20.0" />
+                                 </font>
+                              </Label>
                               <Label layoutX="14.0" layoutY="260.0" text="NIF:" />
                               <TextField fx:id="nifAutorizadoEliminar" layoutX="78.0" layoutY="256.0" />
                               <Button fx:id="botonEliminar" layoutX="14.0" layoutY="302.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="25.0" prefWidth="216.0" text="ELIMINAR" />
