@@ -19,7 +19,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.paujoseluis.gestionbancaria.SecondaryController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="768.0" prefWidth="1024.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.paujoseluis.gestionbancaria.SecondaryController">
    <children>
       <Pane prefHeight="165.0" prefWidth="1024.0">
          <children>
@@ -33,59 +33,59 @@
                   <Image url="@images/cerrar.png" />
                </image>
             </ImageView>
-            <Label layoutX="168.0" layoutY="36.0" text="GRAN BANCO DE SUECA" textFill="#087b97">
+            <Label id="tituloPrincipal" layoutX="168.0" layoutY="36.0" stylesheets="@css/estilos.css" text="GRAN BANCO DE SUECA" textFill="#087b97">
                <font>
-                  <Font name="Roboto Bold" size="50.0" />
+                  <Font name="System Bold" size="50.0" />
                </font>
             </Label>
          </children>
       </Pane>
-      <Pane layoutY="173.0" prefHeight="118.0" prefWidth="1024.0">
+      <Pane layoutY="173.0" prefHeight="165.0" prefWidth="1024.0">
          <children>
-            <Label layoutX="14.0" layoutY="2.0" text="INFO CUENTA" textFill="#087b97">
+            <Label id="infoCuentaTituloPrincipal" layoutX="14.0" stylesheets="@css/estilos.css" text="INFO CUENTA" textFill="#087b97">
                <font>
-                  <Font name="Roboto Bold" size="20.0" />
+                  <Font name="System Bold" size="20.0" />
                </font></Label>
-            <Label layoutX="132.0" layoutY="37.0" text="Número de cuenta:" />
-            <Label layoutX="132.0" layoutY="64.0" text="Titular:" />
-            <Label fx:id="saldo" layoutX="603.0" layoutY="28.0" prefHeight="53.0" prefWidth="239.0" text="0.0€">
+            <Label id="infoCuentaTituloSecundario" layoutX="153.0" layoutY="49.0" stylesheets="@css/estilos.css" text="Número de cuenta:" />
+            <Label id="infoCuentaTituloSecundario" layoutX="153.0" layoutY="92.0" stylesheets="@css/estilos.css" text="Titular:" />
+            <Label id="saldo" fx:id="saldo" layoutX="602.0" layoutY="61.0" prefHeight="63.0" prefWidth="292.0" stylesheets="@css/estilos.css" text="0.0€">
                <font>
                   <Font size="36.0" />
                </font>
             </Label>
-            <Label fx:id="numCuenta" layoutX="240.0" layoutY="37.0" text="-----------" />
-            <Label fx:id="titular" layoutX="181.0" layoutY="64.0" text="-----------" />
+            <Label id="infoCuenta" fx:id="numCuenta" layoutX="376.0" layoutY="53.0" stylesheets="@css/estilos.css" text="-----------" />
+            <Label id="infoCuenta" fx:id="titular" layoutX="253.0" layoutY="96.0" stylesheets="@css/estilos.css" text="-----------" />
          </children>
       </Pane>
-      <Pane layoutX="14.0" layoutY="291.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="256.0">
+      <Pane layoutX="14.0" layoutY="351.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="200.0" prefWidth="256.0">
          <children>
-            <Label layoutY="2.0" text="INGRESAR" textFill="#087b97">
+            <Label layoutY="2.0" styleClass="titulosSecundarios" stylesheets="@css/estilos.css" text="INGRESAR" textFill="#087b97">
                <font>
-                  <Font name="Roboto Bold" size="20.0" />
+                  <Font name="System Bold" size="20.0" />
                </font></Label>
-            <Label layoutX="14.0" layoutY="38.0" text="Cantidad:" />
-            <Label layoutX="14.0" layoutY="67.0" text="Motivo:" />
-            <Button fx:id="botonIngresar" layoutX="16.0" layoutY="102.0" mnemonicParsing="false" onAction="#ingresar" prefHeight="25.0" prefWidth="216.0" text="INGRESAR" />
+            <Label layoutX="14.0" layoutY="38.0" styleClass="texto" stylesheets="@css/estilos.css" text="Cantidad:" />
+            <Label layoutX="14.0" layoutY="67.0" styleClass="texto" stylesheets="@css/estilos.css" text="Motivo:" />
+            <Button fx:id="botonIngresar" layoutX="16.0" layoutY="102.0" mnemonicParsing="false" onAction="#ingresar" prefHeight="25.0" prefWidth="216.0" styleClass="botones" stylesheets="@css/estilos.css" text="INGRESAR" />
             <Spinner fx:id="cantidadIngresar" editable="true" layoutX="83.0" layoutY="34.0" />
             <ChoiceBox fx:id="motivoIngreso" layoutX="82.0" layoutY="68.0" onMouseClicked="#cambioCantidad" prefWidth="150.0" />
          </children>
       </Pane>
-      <Pane layoutX="14.0" layoutY="491.0" prefHeight="200.0" prefWidth="256.0">
+      <Pane layoutX="14.0" layoutY="551.0" prefHeight="200.0" prefWidth="256.0">
          <children>
-            <Label layoutY="2.0" text="RETIRAR" textFill="#087b97">
+            <Label layoutY="2.0" styleClass="titulosSecundarios" stylesheets="@css/estilos.css" text="RETIRAR" textFill="#087b97">
                <font>
-                  <Font name="Roboto Bold" size="20.0" />
+                  <Font name="System Bold" size="20.0" />
                </font></Label>
-            <Label layoutX="13.0" layoutY="34.0" text="Cantidad:" />
-            <Label layoutX="13.0" layoutY="68.0" text="Motivo:" />
-            <Button fx:id="botonRetirar" layoutX="13.0" layoutY="141.0" mnemonicParsing="false" onAction="#retirar" prefHeight="25.0" prefWidth="216.0" text="RETIRAR" />
+            <Label layoutX="13.0" layoutY="34.0" styleClass="texto" stylesheets="@css/estilos.css" text="Cantidad:" />
+            <Label layoutX="13.0" layoutY="68.0" styleClass="texto" stylesheets="@css/estilos.css" text="Motivo:" />
+            <Button fx:id="botonRetirar" layoutX="13.0" layoutY="146.0" mnemonicParsing="false" onAction="#retirar" prefHeight="25.0" prefWidth="216.0" styleClass="botones" stylesheets="@css/estilos.css" text="RETIRAR" />
             <Spinner fx:id="cantidadRetirar" layoutX="83.0" layoutY="30.0" />
             <ChoiceBox fx:id="motivoRetirada" layoutX="82.0" layoutY="64.0" prefWidth="150.0" />
-            <ProgressBar fx:id="donacionONG" layoutX="13.0" layoutY="113.0" prefHeight="18.0" prefWidth="216.0" progress="0.0" />
-            <Label layoutX="13.0" layoutY="93.0" text="ONG" />
+            <ProgressBar fx:id="donacionONG" layoutX="13.0" layoutY="120.0" prefHeight="18.0" prefWidth="216.0" progress="0.0" style="-fx-progress-color: #087b97;" />
+            <Label layoutX="13.0" layoutY="96.0" styleClass="texto" stylesheets="@css/estilos.css" text="ONG" />
          </children>
       </Pane>
-      <Pane layoutX="327.0" layoutY="291.0" prefHeight="393.0" prefWidth="650.0">
+      <Pane layoutX="327.0" layoutY="351.0" prefHeight="393.0" prefWidth="650.0">
          <children>
             <TabPane prefHeight="381.0" prefWidth="650.0" tabClosingPolicy="UNAVAILABLE">
               <tabs>
@@ -103,26 +103,29 @@
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="386.0" prefWidth="650.0">
                            <children>
                               <ListView fx:id="listaAutorizados" fixedCellSize="2.0" layoutX="302.0" layoutY="14.0" prefHeight="317.0" prefWidth="322.0" />
-                              <Label layoutX="14.0" layoutY="22.0" text="TOTAL AUTORIZADOS" />
-                              <ProgressIndicator fx:id="totalAutorizados" layoutX="142.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="46.0" prefWidth="53.0" progress="0.55" />
-                              <Label layoutX="14.0" layoutY="85.0" text="AUTORIZAR" textFill="#087b97">
+                              <Label layoutX="8.0" layoutY="14.0" styleClass="titulosSecundarioPlus" stylesheets="@css/estilos.css" text="AUTORIZADOS">
                                  <font>
-                                    <Font name="Roboto Bold" size="20.0" />
+                                    <Font name="System Bold" size="24.0" />
+                                 </font></Label>
+                              <ProgressIndicator fx:id="totalAutorizados" layoutX="166.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="46.0" prefWidth="53.0" progress="0.55" style="-fx-progress-color: #087b97;" />
+                              <Label layoutX="8.0" layoutY="58.0" styleClass="titulosSecundarios" stylesheets="@css/estilos.css" text="AUTORIZAR" textFill="#087b97">
+                                 <font>
+                                    <Font name="System Bold" size="20.0" />
                                  </font>
                               </Label>
-                              <Label layoutX="14.0" layoutY="114.0" text="Nombre:" />
+                              <Label layoutX="14.0" layoutY="114.0" styleClass="texto" stylesheets="@css/estilos.css" text="Nombre:" />
                               <TextField fx:id="nombreAutorizado" layoutX="78.0" layoutY="110.0" />
-                              <Label layoutX="14.0" layoutY="146.0" text="NIF:" />
+                              <Label layoutX="14.0" layoutY="146.0" styleClass="texto" stylesheets="@css/estilos.css" text="NIF:" />
                               <TextField fx:id="nifAutorizado" layoutX="78.0" layoutY="142.0" />
-                              <Button fx:id="botonAutorizar" layoutX="14.0" layoutY="188.0" mnemonicParsing="false" onAction="#autorizar" prefHeight="25.0" prefWidth="216.0" text="AUTORIZAR" />
-                              <Label layoutX="14.0" layoutY="229.0" text="ELIMINAR" textFill="#087b97">
+                              <Button fx:id="botonAutorizar" layoutX="14.0" layoutY="188.0" mnemonicParsing="false" onAction="#autorizar" prefHeight="25.0" prefWidth="216.0" styleClass="botones" stylesheets="@css/estilos.css" text="AUTORIZAR" />
+                              <Label layoutX="14.0" layoutY="229.0" styleClass="titulosSecundarios" stylesheets="@css/estilos.css" text="ELIMINAR" textFill="#087b97">
                                  <font>
-                                    <Font name="Roboto Bold" size="20.0" />
+                                    <Font name="System Bold" size="20.0" />
                                  </font>
                               </Label>
-                              <Label layoutX="14.0" layoutY="260.0" text="NIF:" />
+                              <Label layoutX="14.0" layoutY="260.0" styleClass="texto" stylesheets="@css/estilos.css" text="NIF:" />
                               <TextField fx:id="nifAutorizadoEliminar" layoutX="78.0" layoutY="256.0" />
-                              <Button fx:id="botonEliminar" layoutX="14.0" layoutY="302.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="25.0" prefWidth="216.0" text="ELIMINAR" />
+                              <Button fx:id="botonEliminar" layoutX="14.0" layoutY="302.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="25.0" prefWidth="216.0" styleClass="botones" stylesheets="@css/estilos.css" text="ELIMINAR" />
                            </children>
                         </AnchorPane>
                   </content>
@@ -131,26 +134,29 @@
                   <content>
                     <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
                            <children>
-                              <Label layoutX="14.0" layoutY="14.0" text="DOMICILIAR" />
-                              <Label layoutX="14.0" layoutY="40.0" prefHeight="18.0" prefWidth="67.0" text="CIF:" />
+                              <Label layoutX="8.0" layoutY="5.0" styleClass="titulosSecundarios" stylesheets="@css/estilos.css" text="DOMICILIAR" textFill="#087b97">
+                                 <font>
+                                    <Font name="Titillium Web Bold" size="20.0" />
+                                 </font></Label>
+                              <Label layoutX="14.0" layoutY="40.0" prefHeight="18.0" prefWidth="67.0" styleClass="texto" stylesheets="@css/estilos.css" text="CIF:" />
                               <TextField fx:id="cif" layoutX="95.0" layoutY="37.0" />
-                              <Label layoutX="14.0" layoutY="73.0" prefHeight="18.0" prefWidth="67.0" text="Empresa:" />
+                              <Label layoutX="14.0" layoutY="73.0" prefHeight="18.0" prefWidth="67.0" styleClass="texto" stylesheets="@css/estilos.css" text="Empresa:" />
                               <TextField fx:id="nombreEmpresa" layoutX="95.0" layoutY="70.0" />
-                              <Label layoutX="12.0" layoutY="106.0" prefHeight="18.0" prefWidth="67.0" text="Importe:" />
-                              <Label layoutX="13.0" layoutY="140.0" prefHeight="18.0" prefWidth="67.0" text="Concepto:" />
+                              <Label layoutX="12.0" layoutY="106.0" prefHeight="18.0" prefWidth="67.0" styleClass="texto" stylesheets="@css/estilos.css" text="Importe:" />
+                              <Label layoutX="13.0" layoutY="140.0" prefHeight="18.0" prefWidth="67.0" styleClass="texto" stylesheets="@css/estilos.css" text="Concepto:" />
                               <TextField fx:id="conceptoRecibo" layoutX="94.0" layoutY="137.0" />
-                              <Label layoutX="14.0" layoutY="174.0" prefHeight="18.0" prefWidth="75.0" text="Periodicidad:" />
+                              <Label layoutX="14.0" layoutY="174.0" prefHeight="23.0" prefWidth="91.0" styleClass="texto" stylesheets="@css/estilos.css" text="Periodicidad:" />
                               <Spinner fx:id="importeRecibo" layoutX="95.0" layoutY="103.0" />
-                              <RadioButton fx:id="rb_menusal" layoutX="93.0" layoutY="192.0" mnemonicParsing="false" text="Mensual">
+                              <RadioButton fx:id="rb_menusal" layoutX="95.0" layoutY="197.0" mnemonicParsing="false" styleClass="texto" stylesheets="@css/estilos.css" text="Mensual">
                                  <toggleGroup>
                                     <ToggleGroup fx:id="periodicidad" />
                                  </toggleGroup>
                               </RadioButton>
-                              <RadioButton fx:id="rb_trimestral" layoutX="93.0" layoutY="217.0" mnemonicParsing="false" text="Trimestral" toggleGroup="$periodicidad" />
-                              <RadioButton fx:id="rb_anual" layoutX="94.0" layoutY="242.0" mnemonicParsing="false" text="Anual" toggleGroup="$periodicidad" />
-                              <Button fx:id="botonDomiciliar" layoutX="13.0" layoutY="280.0" mnemonicParsing="false" onAction="#domiciliar" prefHeight="26.0" prefWidth="238.0" text="DOMICILIAR" />
+                              <RadioButton fx:id="rb_trimestral" layoutX="95.0" layoutY="222.0" mnemonicParsing="false" styleClass="texto" stylesheets="@css/estilos.css" text="Trimestral" toggleGroup="$periodicidad" />
+                              <RadioButton fx:id="rb_anual" layoutX="94.0" layoutY="245.0" mnemonicParsing="false" styleClass="texto" stylesheets="@css/estilos.css" text="Anual" toggleGroup="$periodicidad" />
+                              <Button fx:id="botonDomiciliar" layoutX="13.0" layoutY="280.0" mnemonicParsing="false" onAction="#domiciliar" prefHeight="26.0" prefWidth="238.0" styleClass="botones" stylesheets="@css/estilos.css" text="DOMICILIAR" />
                               <ListView fx:id="listaRecibos" layoutX="284.0" layoutY="27.0" prefHeight="238.0" prefWidth="347.0" />
-                              <Button fx:id="botonFiltrar" layoutX="338.0" layoutY="280.0" mnemonicParsing="false" onAction="#filtrarPeriodicidad" prefHeight="26.0" prefWidth="240.0" text="FILTRAR" />
+                              <Button fx:id="botonFiltrar" layoutX="338.0" layoutY="280.0" mnemonicParsing="false" onAction="#filtrarPeriodicidad" prefHeight="26.0" prefWidth="240.0" styleClass="botones" stylesheets="@css/estilos.css" text="FILTRAR" />
                            </children>
                         </AnchorPane>
                   </content>

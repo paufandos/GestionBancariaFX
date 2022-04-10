@@ -1,0 +1,77 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 8 abr 2022, 17:47:10
+    Author     : Pau Fandos Gorris
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
+#tituloPrincipal{
+    -fx-font-family: 'Titillium Web', sans-serif;
+    -fx-font-weight: bold;
+    -fx-font-size: 50px;
+    -fx-text-fill: #087b97;
+}
+
+#saldo{
+    -fx-font-family: 'Titillium Web', sans-serif;
+    -fx-font-size: 35px;
+    -fx-alignment: center;
+}
+
+#infoCuentaTituloPrincipal{
+    -fx-font-family: 'Titillium Web', sans-serif;
+    -fx-font-size: 30px;
+    -fx-text-fill: #087b97;
+    -fx-font-weight: bold;
+}
+
+
+#infoCuentaTituloSecundario{
+    -fx-font-family: 'Titillium Web', sans-serif;
+    -fx-font-size: 25px;
+    -fx-text-fill: #087b97;
+}
+
+#infoCuenta{
+    -fx-font-family: 'Titillium Web', sans-serif;
+    -fx-font-size: 20px;
+}
+
+.titulosSecundario{
+    -fx-font-family: 'Titillium Web', sans-serif;
+    -fx-font-weight: bold;
+    -fx-font-size: 20px;
+    -fx-text-fill: #087b97;
+}
+
+.titulosSecundarioPlus{
+    -fx-font-family: 'Titillium Web', sans-serif;
+    -fx-font-weight: bold;
+    -fx-font-size: 25px;
+    -fx-text-fill: #087b97;
+}
+
+.texto{
+    -fx-font-family: C, sans-serif;
+    -fx-font-size: 15px;
+}
+
+.botones{
+    -fx-border-radius: 12px;
+    -fx-background-color: #087b97;
+    -fx-text-fill: white;
+    -fx-transition: all ease 100ms;
+    -fx-effect: dropshadow(three-pass-box, #055163, 0, 0, 0, 6);
+    -fx-box-shadow: 0px 10px 0px #055163;
+    -fx-font-weight: bold;
+}
+
+.botones:pressed{
+    -fx-translate-y: 2;
+    -fx-effect: dropshadow(three-pass-box, #055163, 0, 0, 0, 2);
+}
